@@ -5,10 +5,12 @@
 {% endblock %}
 
 {% block content %}
+
+  <div class="separation"></div>
 <section id="hautDePage">
-    <img src="{% static 'home/img/crayons.png' %}" alt="crayons Décoration Titre"/>
-    <h1>Nos orientations</h1>
-    <img src="{% static 'home/img/crayons.png' %}" alt="crayons Décoration Titre"/>
+    
+    <h1>Nos aides à l'orientation</h1>
+    
 </section>
 {% for cour in cours %}
     {% include 'home/vignetteCours.html'%}

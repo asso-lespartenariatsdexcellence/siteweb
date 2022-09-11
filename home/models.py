@@ -36,6 +36,9 @@ class Cours(models.Model):
 	modif = models.DateTimeField(auto_now_add=True)
 	public = models.BooleanField(default=False)
 	estCours = models.BooleanField(default=True)
+	estActionCampus = models.BooleanField(default=True)
+	estActionCollege = models.BooleanField(default=True)
+	estActionLycee = models.BooleanField(default=True)
 
 	@property
 	def classes(self):

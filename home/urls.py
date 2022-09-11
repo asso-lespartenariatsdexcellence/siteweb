@@ -5,12 +5,11 @@ from home.views import *
 
 urlpatterns = [
     path('', accueil),
-	path('matieres/', matieres, {'id': None}),
+    path('accueil/', accueil),
+    path('matieres/', matieres, {'id': None}),
     path('matieres/<int:id>/', matieres),
     path('orientation/', orientation),
     path('cordees/', cordees),
-    path('cordees-de-la-reussite/', cordees),
-    path('projets/', projets),
     path('contact/', contact),
     path('cours/<int:id>/', cours),
     path('ad/cours/<int:id>/', coursAdmin),
@@ -27,5 +26,13 @@ urlpatterns = [
     path('deleteGroupe/<int:id>/', deleteGroupe),
     path('deleteEleve/<int:id>/', deleteEleve),
     path('deleteAppelle/<int:id>/', deleteAppelle),
-    path('getAppel/', getxl)
+    path('getAppel/', getxl),
+    path('actionscampus/', actionscampus),
+    path('histoire/', histoire),
+    path('lycee/', lycee),
+    path('notrecampus/', notrecampus),
+    path('nous/', nous),
+    path('partenaires/', partenaires),
+    path('sdl/', sdl),
+    path('college/', college),
 ]

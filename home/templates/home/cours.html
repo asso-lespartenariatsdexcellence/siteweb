@@ -1,3 +1,6 @@
+
+<!-- mettre la vidéo en priorité, en haut : difficulté et niveau puis le td et ensuite le corrigé : bouton en bas tout télécharger -->
+
 {% extends "home/base.html" %}
 {% load static %}
 {% block head %}
@@ -11,10 +14,18 @@
 
 
 {% block content %}
-    <section>
+    <section id="hautdepage">
         {% if user.is_authenticated %}
             <a href="/ad/cours/{{ cours.id }}">Modifier le cours</a>
         {% endif %}
+        <p>{% for classe in cour.classes %}{{ classe.nom }}{% endfor %}</p>
+    </section>
+        <section id="video">
+            <video width="320" height="240" controls>
+                  <source src=”http://techslides.com/demos/sample-videos/small.ogv” type=video/ogg> <source src="LIEN DE LA VIDEO" type=video/mp4> <!-- lien de la vidéo à mettre-->
+                </video>
+        </section>
+    <section id="cours">
         <iframe srcdoc='
             <html>
                 <head>

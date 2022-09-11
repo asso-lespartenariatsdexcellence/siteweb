@@ -6,7 +6,7 @@ from home.models import *
 class CoursForm(ModelForm):
 	class Meta:
 		model = Cours
-		fields = ['matiere', 'nom', 'priorite', 'public', 'estCours', 'desc', 'img', 'niveau', 'text']
+		fields = ['matiere', 'nom', 'priorite', 'public', 'estCours', 'estActionCampus','estActionCollege','estActionLycee', 'desc', 'img', 'niveau', 'text']
 		widgets = {'niveau': CheckboxSelectMultiple()}
 
 

@@ -3,6 +3,7 @@ from django import forms
 from home.models import *
 
 
+
 class CoursForm(ModelForm):
 	class Meta:
 		model = Cours

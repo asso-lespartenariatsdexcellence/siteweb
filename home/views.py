@@ -11,6 +11,7 @@ from home.models import *
 from openpyxl import Workbook
 
 
+
 # Create your views here.
 
 def getBase(request):
@@ -21,7 +22,7 @@ def accueil(request):
     return render(request, "home/accueil.html", getBase(request))
 
 
-def matieres(request, id):
+def matieres(request,id):
     if id is None:
         cours = Cours.objects.filter(estCours=True)
     else:

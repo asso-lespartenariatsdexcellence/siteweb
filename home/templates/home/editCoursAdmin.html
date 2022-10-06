@@ -1,8 +1,9 @@
 {% extends "home/base.html" %}
 {% load static %}
 {% block head %}
-    <link rel="stylesheet" type="text/css" href="{% static 'home/css/cours.css' %}">
-    <script src="{% static 'home/ckeditor/ckeditor.js' %}"></script>
+    <!--<link rel="stylesheet" type="text/sass" href="{% static 'home/css/cours.sass' %}">-->
+
+
 {% endblock %}
 
 
@@ -16,6 +17,9 @@
                 <tr><th><label for="{{ coursForm.priorite.id_for_label }}">{{ coursForm.priorite.label }}</label></th><td>{{ coursForm.priorite }}</td></tr>
                 <tr><th><label for="{{ coursForm.public.id_for_label }}">{{ coursForm.public.label }}</label></th><td>{{ coursForm.public }}</td></tr>
                 <tr><th><label for="{{ coursForm.estCours.id_for_label }}">Cocher pour un cours decocher pour une orientation</label></th><td>{{ coursForm.estCours }}</td></tr>
+                <tr><th><label for="{{ coursForm.estActionCampus.id_for_label }}">Cocher pour une action du campus</label></th><td>{{ coursForm.estCours }}</td></tr>
+                <tr><th><label for="{{ coursForm.estActionLycee.id_for_label }}">Cocher pour une action du lycée</label></th><td>{{ coursForm.estCours }}</td></tr>
+                <tr><th><label for="{{ coursForm.estActionCollege.id_for_label }}">Cocher pour une action du collège</label></th><td>{{ coursForm.estCours }}</td></tr>
                 <tr><th><label for="{{ coursForm.desc.id_for_label }}">{{ coursForm.desc.label }}</label></th><td>{{ coursForm.desc }}</td></tr>
                 <tr><th><label for="{{ coursForm.img.id_for_label }}">{{ coursForm.img.label }}</label></th><td>{{ coursForm.img }}</td></tr>
                 <tr><th><label for="{{ coursForm.niveau.id_for_label }}">{{ coursForm.niveau.label }}</label></th><td>{{ coursForm.niveau }}</td></tr>
@@ -40,6 +44,7 @@
             </table>
             <input type="submit">
         </form>
+        <script src="./node_modules/ckeditor4/ckeditor.js"></script>
     <script>
         CKEDITOR.replace( '{{ coursForm.text.id_for_label }}' );
     </script>
